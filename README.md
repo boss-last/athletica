@@ -127,3 +127,68 @@ npm run build
 
 # 6. Lancer le serveur
 php artisan serve
+🧪 Tests
+bash
+php artisan test
+Résultat :
+
+text
+Tests:    50 passed (113 assertions)
+Duration: 2.05s
+Le CI/CD GitHub Actions lance automatiquement les tests à chaque push :
+
+✅ PHPUnit Tests : 50 tests
+
+✅ Code Style : Laravel Pint
+
+📚 Documentation API
+Documentation Swagger disponible après lancement :
+
+text
+http://127.0.0.1:8000/api/documentation
+
+🗄️ Base de Données
+19 tables sur Supabase :
+
+users, athlete_profiles, platform_connections, activities, activity_gps_points, activity_comments, activity_likes, user_stats, goals, challenges, challenge_participants, follows, badges, user_badges, training_plans, training_sessions, fitness_metrics, notifications, personal_access_tokens
+
+🔐 Sécurité
+✅ Authentification Sanctum
+
+✅ Protection CSRF sur tous les formulaires
+
+✅ Validation côté serveur (Requests)
+
+✅ Upload sécurisé (validation type/taille)
+
+✅ OAuth 2.0 pour Strava
+
+✅ Code de connexion à 6 chiffres
+
+✅ HTTPS en production
+
+📱 Application Mobile
+Application Flutter disponible :
+
+Android : APK (47.7 MB)
+
+Web : flutter run -d chrome
+
+🚀 Déploiement
+Backend (Laravel)
+bash
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+Mobile (Flutter)
+bash
+flutter build apk --release
+flutter build appbundle --release
+📄 Licence
+Ce projet est sous licence MIT. Voir LICENSE pour plus de détails.
+
+👨‍💻 Auteur
+Christian Amara Bamba
+
+📧 romansreimsroland@gmail.com
+📍 Abidjan, Côte d'Ivoire 🇨🇮
