@@ -23,6 +23,8 @@ class EmailTest extends TestCase
             'full_name' => 'New User',
         ]);
 
+        $response->assertRedirect();
+
         Mail::assertSent(WelcomeMail::class);
     }
 
